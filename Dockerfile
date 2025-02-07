@@ -3,7 +3,7 @@ FROM python:3.12-slim
 WORKDIR /pipeline
 
 # Set the entrypoint to Apache Beam SDK worker launcher.
-COPY --from=apache/beam_python3.12_sdk:2.62.0 /opt/apache/beam /opt/apache/beam
+COPY --from=apache/beam_python3.12_sdk:2.63.0 /opt/apache/beam /opt/apache/beam
 ENTRYPOINT [ "/opt/apache/beam/boot" ]
 
 # Install the requirements.
